@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "lotus-dataset-statistics"
+version = "0.1.0"
+description = "description of the lotus-dataset (https://zenodo.org/records/7534071)"
+authors = ["pamrein <pascal.amrein@unifr.ch>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jupyter = "^1.0.0"
+matplotlib = "^3.9.0"
+polars = "^0.20.31"
+numpy = "^1.26.4"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
