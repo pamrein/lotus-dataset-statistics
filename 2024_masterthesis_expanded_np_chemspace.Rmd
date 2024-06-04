@@ -1,0 +1,137 @@
+---
+title: "exanded natural product chemspace"
+subtitle: "Masterthesis - COMMONS Lab (Pierre-Marie Allard)"
+author: "Pascal Amrein"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: true
+    highlight: zenburn
+    number_sections: yes
+    template: null
+    fig_caption: yes
+  html_document:
+    toc: true
+    theme: united
+reference-section-title: Bibliography
+bibliography: lib.bib
+params:
+n: NA
+font-size: 12pt
+linestretch: 1.5
+geometry: left=2.5cm,right=2.5cm,top=3cm,bottom=3cm
+header-includes:
+  \usepackage{float}
+  \usepackage{graphicx}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+  \usepackage{fancyhdr}
+  \pagestyle{headings}
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = F, fig.height = 2.5, fig.width = 5)
+# pacman::p_load(tidyverse, tinytex)
+```
+
+\pagenumbering{gobble}
+\pagebreak
+
+\pagenumbering{arabic}
+
+
+
+
+# Abstract {-}
+
+
+
+# Introduction
+Massspectrometrie (targeted vs. untargeted). 
+Mithilfe von generierten Molekülen sollte es möglich sein, in bereits bekannten spektren evt. neue Moleküle zu finden.
+In Silico approach für das finden von neuen Molekülen.
+Problematik: wie bestimmt man etwas, was man nicht kennt? Abgleich von "hypothetisch" möglichen Molekülen in einem bestimmten organismus.
+
+
+
+Erweiterung der Lotus database.
+
+
+
+
+small summary about MINEs
+
+small summary about LOTUS
+
+expand the generation
+
+
+# Method
+Für die Erweiterung der Moleküle dient die Software Pickaxe, welche optimiert wurde mit einem möglichst kleienen Regelset, möglichst viele Reaktionen, bzw. Moleküle vorherzusagen. 
+Das verwendete Regelset "JN1224min" beinhaltet 1224 reaction rules (SMARTS), welche mithilfe einer weiteren Komponentenliste (Kofaktor, usw.) gebraucht werden für eine Vorhersage.
+
+Pickaxe [@Mines_papers] wendet das Regelset mit den Komponenten an und berechnet daraus die neuen Moleküle, welche als compounds.tsv und reactions.tsv gespeichert werden. Es gibt auch die Möglichkeit zur Verwendung der MongoDB, welche platzsparender sein soll und häufig auch als backen dient von Webseiten. Diese wurde hier getestet, aber nicht genutzt.
+
+
+
+
+LOTUS dataset
+
+Dataset-extractor
+
+MINES
+- rulesdataset explained (metacyc, not BNICE) -> not provided links, how they did it.
+- 
+
+run full SMILES from LOTUS with MINEs
+
+
+# Result
+
+own results
+
+anzahl Generated compounds
+
+
+# Discussion
+
+
+
+# References
+
+## Abbreviations
+NP : Natural Product
+SMILES : Simplified Molecular Input Line Entry System (represents chemical structures in a linear string)
+SMARTS : SMiles ARbitrary Target Specification
+SMIRKS : "Simplified Molecular Input Line Entry System" is a hybrid of SMILES and SMARTS. It represent reactions in a string.
+
+
+## Bibliography
+<div id="refs"></div>
+
+\tableofcontents
+
+## Figures
+\listoffigures
+
+## Tables
+\listoftables
+\pagebreak
+
+\clearpage
+
+## Links
+
+
+# Appendix {-}
+
+## Code {-}
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+```
+
+
+## Declaration of Authenticity {-}
+I declare that I completed the report independently and used only these materials that are
+listed. All materials used, from published as well as unpublished sources, whether directly quoted or
+paraphrased, are duly reported. 
+I declare that the full report was written by me without the help of any other intelligence (chat gpt, ...).
